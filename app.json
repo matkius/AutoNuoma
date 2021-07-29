@@ -1,0 +1,27 @@
+{
+  "id": "aabf516f-54db-4dc6-ae85-58cebb929ca8",
+  "name": "AutoNuoma",
+  "publisher": "Default publisher",
+  "version": "1.0.0.0",
+  "brief": "",
+  "description": "",
+  "privacyStatement": "",
+  "EULA": "",
+  "help": "",
+  "url": "",
+  "logo": "",
+  "dependencies": [],
+  "screenshots": [],
+  "platform": "1.0.0.0",
+  "application": "18.0.0.0",
+  "idRanges": [
+    {
+      "from": 60000,
+      "to": 70000
+    }
+  ],
+  "target":"OnPrem",
+  "contextSensitiveHelpUrl": "https://AutoNuoma.com/help/",
+  "showMyCode": true,
+  "runtime": "7.0"
+}
