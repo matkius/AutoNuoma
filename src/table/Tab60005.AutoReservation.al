@@ -72,13 +72,13 @@ table 60005 "Auto Reservation"
         if "Reservation Start Date" > "Reservation End Date" then
             Error(startEarlierThanEndLbl)
         else begin
-            reservations.SetRange("Auto No.", "Auto No.");
-            reservations.SetFilter("Reservation End Date", '>%1', WorkDate());
+            reservations.SetRange("Auto No.", rec."Auto No.");
             if reservations.FindSet() then
                 repeat
-                    if (reservations."Line No." <> "Line No.") then
-                        if ("Reservation Start Date" <= reservations."Reservation End Date") and ("Reservation Start Date" >= reservations."Reservation Start Date")
-                            or ("Reservation End Date" <= reservations."Reservation End Date") and ("Reservation End Date" >= reservations."Reservation Start Date") then
+                    if (reservations."Line No." <> rec."Line No.") then
+                        if (rec."Reservation Start Date" <= reservations."Reservation End Date") and (rec."Reservation Start Date" >= reservations."Reservation Start Date")
+                            or (rec."Reservation End Date" <= reservations."Reservation End Date") and (rec."Reservation End Date" >= reservations."Reservation Start Date")
+                            or (rec."Reservation Start Date" <= reservations."Reservation Start Date") and (rec."Reservation End Date" >= reservations."Reservation End Date") then
                             Error(timeConflictlbl);
                 until reservations.Next() = 0;
         end;

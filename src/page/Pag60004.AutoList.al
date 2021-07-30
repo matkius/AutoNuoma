@@ -100,10 +100,12 @@ page 60004 "Auto List"
                 Caption = 'Rent History Report';
                 ApplicationArea = All;
                 Image = AmountByPeriod;
-                RunObject = report "Auto Rent History";
                 trigger OnAction();
+                var
+                    auto: Record Auto;
                 begin
-
+                    auto.SetRange("No.", rec."No.");
+                    Report.RunModal(Report::"Auto Rent History", true, true, auto);
                 end;
             }
         }

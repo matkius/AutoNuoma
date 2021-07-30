@@ -1,7 +1,6 @@
 report 60016 "Auto Rent History"
 {
-    UsageCategory = Administration;
-    ApplicationArea = All;
+    UsageCategory = None;
     RDLCLayout = './src/reportlayouts/R60016.rdl';
 
     dataset

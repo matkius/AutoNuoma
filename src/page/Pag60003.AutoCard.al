@@ -1,8 +1,7 @@
 page 60003 "Auto Card"
 {
     PageType = Card;
-    ApplicationArea = All;
-    UsageCategory = Administration;
+    UsageCategory = None;
     SourceTable = Auto;
     Caption = 'Auto Card';
     layout
@@ -105,10 +104,12 @@ page 60003 "Auto Card"
                 Caption = 'Rent History Report';
                 ApplicationArea = All;
                 Image = AmountByPeriod;
-                RunObject = report "Auto Rent History";
                 trigger OnAction();
+                var
+                    auto: Record Auto;
                 begin
-
+                    auto.SetRange("No.", rec."No.");
+                    Report.RunModal(Report::"Auto Rent History", true, true, auto);
                 end;
             }
         }

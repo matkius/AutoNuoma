@@ -1,8 +1,7 @@
 page 60002 "Auto Model List"
 {
     PageType = List;
-    ApplicationArea = All;
-    UsageCategory = Lists;
+    UsageCategory = None;
     SourceTable = "Auto Model";
     Caption = 'Auto Model List';
     layout

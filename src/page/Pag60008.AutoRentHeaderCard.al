@@ -1,8 +1,7 @@
 page 60008 "Auto Rent Header Card"
 {
     PageType = Card;
-    ApplicationArea = All;
-    UsageCategory = Administration;
+    UsageCategory = None;
     SourceTable = "Auto Rent Header";
     RefreshOnActivate = true;
 

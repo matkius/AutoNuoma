@@ -1,8 +1,7 @@
 page 60013 "Finished Auto Rent Line List"
 {
     PageType = ListPart;
-    ApplicationArea = All;
-    UsageCategory = Lists;
+    UsageCategory = None;
     SourceTable = "Finished Auto Rent Line";
     Caption = 'Finished Auto Rent Line List';
     layout

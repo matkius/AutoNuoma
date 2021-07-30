@@ -1,8 +1,7 @@
 page 60012 "Finished Auto Rent Header Card"
 {
     PageType = Card;
-    ApplicationArea = All;
-    UsageCategory = Administration;
+    UsageCategory = None;
     SourceTable = "Finished Auto Rent Header";
     Caption = 'Finished Auto Rent Header Card';
     layout

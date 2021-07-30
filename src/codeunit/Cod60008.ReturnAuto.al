@@ -20,10 +20,8 @@ codeunit 60008 "Return Auto"
         FinishedHeader.TransferFields(Header);
         Header.CalcFields("Sum");
         FinishedHeader."Sum" := Header."Sum";
-
-        //FinishedHeader."Drivers License" := Header."Drivers License";
-        //FinishedHeader."Drivers License".Insert(Header."Drivers License".Item(1));
         FinishedHeader.Insert();
+
         if Header."Drivers License".HasValue then
             CopyPicture(Header, FinishedHeader);
 
@@ -70,7 +68,7 @@ codeunit 60008 "Return Auto"
         ConfirmManagement: Codeunit "Confirm Management";
         ExportPath: Text;
     begin
-        ExportPath := TemporaryPath + HeaderFrom."No." + Format(HeaderFrom."Drivers License".MediaId);
+        ExportPath := TemporaryPath + HeaderFrom."No." + Format(HeaderFrom."Drivers License".MediaId) + '.jpg';
         HeaderFrom."Drivers License".ExportFile(ExportPath);
         FileManagement.GetServerDirectoryFilesList(TempNameValueBuffer, TemporaryPath);
         TempNameValueBuffer.SetFilter(Name, StrSubstNo('%1*', ExportPath));

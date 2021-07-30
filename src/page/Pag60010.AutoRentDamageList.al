@@ -1,8 +1,7 @@
 page 60010 "Auto Rent Damage List"
 {
     PageType = List;
-    ApplicationArea = All;
-    UsageCategory = Lists;
+    UsageCategory = None;
     AutoSplitKey = true;
     SourceTable = "Auto Rent Damage";
 

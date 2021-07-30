@@ -33,7 +33,6 @@ page 60001 "Auto Mark List"
             {
                 Caption = 'View Models';
                 ApplicationArea = All;
-
                 trigger OnAction()
                 var
                     ContractVersionManagement: Codeunit "Auto Mark Management";

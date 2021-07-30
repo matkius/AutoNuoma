@@ -1,8 +1,7 @@
 page 60009 "Auto Rent Line ListPart"
 {
     PageType = ListPart;
-    ApplicationArea = All;
-    UsageCategory = Lists;
+    UsageCategory = None;
     SourceTable = "Auto Rent Line";
     AutoSplitKey = true;
     DelayedInsert = true;

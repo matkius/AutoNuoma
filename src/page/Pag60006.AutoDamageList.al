@@ -1,8 +1,7 @@
 page 60006 "Auto Damage List"
 {
     PageType = List;
-    ApplicationArea = All;
-    UsageCategory = Lists;
+    UsageCategory = None;
     SourceTable = "Auto Damage";
     AutoSplitKey = true;
     Caption = 'Auto Damage List';
